@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema de Gestión</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    body {
+         background-color: #FFA500; /* Fondo naranja */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+ 
+ .login-container {
+     background-color: rgba(51, 51, 51, 0.8); /* Fondo oscuro translúcido */
+     padding: 30px;
+     border-radius: 15px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     color: white;
+     width: 350px;
+ }
+ 
+ .login-container h2 {
+     margin-bottom: 20px;
+     font-weight: 700;
+     font-size: 24px;
+ }
+ 
+ .login-container label {
+     display: block;
+     margin: 10px 0 5px;
+     font-weight: 400;
+     font-size: 14px;
+     text-align: left;
+ }
+ 
+ .login-container input[type="email"],
+ .login-container input[type="password"] {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 10px;
+     border: none;
+     border-radius: 5px;
+     font-size: 16px;
+     background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+     color: #333;
+ }
+ 
+ .login-container .remember-me {
+     display: flex;
+     align-items: center;
+     justify-content: start;
+     margin-bottom: 10px;
+ }
+ 
+ .login-container .remember-me input {
+     margin-right: 5px;
+ }
+ 
+ .login-container .forgot-password {
+     display: block;
+     margin-bottom: 20px;
+     color: #ccc;
+     text-decoration: none;
+     font-size: 14px;
+     text-align: left;
+ }
+ 
+ .login-container button {
+     background-color: rgba(27, 44, 31, 0.8); /* Botón verde translúcido */
+     color: white;
+     padding: 10px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     width: 100%;
+     font-size: 16px;
+     font-weight: 700;
+ }
+ 
+ .login-container button:hover {
+     background-color: rgba(33, 136, 56, 0.8);
+ }
+     </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="../controlador/login.php" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+        
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+</body>
+</html>
